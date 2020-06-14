@@ -5,6 +5,7 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 
 import useCachedResources from './hooks/useCachedResources';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
+import RouterPreviewScreen from './screens/RouterPreviewScreen';
 import LinkingConfiguration from './navigation/LinkingConfiguration';
 
 const Stack = createStackNavigator();
@@ -21,6 +22,7 @@ export default function App(props) {
         <NavigationContainer linking={LinkingConfiguration}>
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen name="PreviewRouter" component={RouterPreviewScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
